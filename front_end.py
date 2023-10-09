@@ -4,6 +4,8 @@ from PIL import Image
 import os
 from csv import DictReader
 from back_end import import_csv_database
+import pandas as pd
+
 
 # Definer CTk tema
 customtkinter.set_appearance_mode("dark")
@@ -324,17 +326,32 @@ class App(customtkinter.CTk):
         # ------------------------------- SORT BY-funktion ---------------------------- #
         
         def sort_by_total_score_function():
-            dict = import_csv_database()
 
-            print(dict[''])
+            # Hent data
+            df = pd.read_csv("database_dummy.csv")
 
-            film_1_titel.configure()
-            film_1_score_1.configure()
-            film_1_score_2.configure()
-            film_1_score_3.configure()
-            film_1_score_4.configure()
-            film_1_score_5.configure()
-            film_1_total_score.configure()
+            # Definer hvor vi vil hente data fra
+            line_number = 1
+            specific_column = 0
+
+            # hent data under variable
+            film_1_titel_data = df.iloc[line_number][specific_column]
+            film_1_score_1_data = df.iloc[line_number][specific_column + 1]
+            film_1_score_2_data = df.iloc[line_number][specific_column + 2]
+            film_1_score_3_data = df.iloc[line_number][specific_column + 3]
+            film_1_score_4_data = df.iloc[line_number][specific_column + 4]
+            film_1_score_5_data = df.iloc[line_number][specific_column + 5]
+            film_1_total_score_data = df.iloc[line_number][specific_column + 6]
+
+
+            # Opdater tekst i labels
+            film_1_titel.configure(text=film_1_titel_data.removeprefix("["))
+            film_1_score_1.configure(text=film_1_score_1_data)
+            film_1_score_2.configure(text=film_1_score_2_data)
+            film_1_score_3.configure(text=film_1_score_3_data)
+            film_1_score_4.configure(text=film_1_score_4_data)
+            film_1_score_5.configure(text=film_1_score_5_data)
+            film_1_total_score.configure(text=film_1_total_score_data.removesuffix("]"))
 
 
 
