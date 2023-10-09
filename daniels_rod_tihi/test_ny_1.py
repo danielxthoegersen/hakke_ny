@@ -1,20 +1,12 @@
-def label_maker(film_antal):
-                
-    counter_1 = 1
-    for i in range(film_antal):
+import pandas as pd
 
-        titel = "film_" + str(film_antal)
-                    
-        setattr(self, titel, value) #equivalent to: self.varname= 'something'
+colnames=["film_titel", "fede_skurke", "bar_hud", "vilde_våben", "one_liners", "episk_action", "total_score"]
 
-        print (self.vartitel)
-                    
+# Hent data
+df = pd.read_csv("database_dummy.csv", names=colnames, header=None)
 
+sorted_database = df.sort_values("total_score", ascending=False)
 
-        counter_1 = counter_1 + 1  
-        
-        
-label_maker()
+print(sorted_database)
 
 
-      
