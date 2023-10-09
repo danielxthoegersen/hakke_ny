@@ -1,29 +1,21 @@
-import csv
-import sys
+import pandas as pd
 
 def main():
-    final_dict = import_csv_database("database_dummy.csv")
-    print()
 
-def import_csv_database(database):
-    fieldnames = ["Film Titel", "Fede Skurke", "Bar Hud", "Vilde Våben", "One Liners", "Episk Action", "Total Score"]
-    final_dict = {}
-    try:
-        with open(database, newline='') as csvfile:
-            reader = csv.DictReader(csvfile, fieldnames=fieldnames)
-            for i, row in enumerate(reader):
-                final_dict[i] = row
-        return final_dict
-    except FileNotFoundError:
-        sys.exit(f"Could not read {database}.")
+    data = collect_data()
+    print(data)
 
-def sort_by_total_score():
-    """"""
+def collect_data():
+    # Hent data og rens data
+    df = pd.read_csv("database_dummy.csv")
+    for col in df.select_dtypes(include=[object]).columns:
+        df[col] = df[col].str.replace(r'\[', '', regex=True)
+        df[col] = df[col].str.replace(r'\]', '', regex=True)
+    return df
 
 
+# def sort_by_total_score_function():
 
-if __name__ =="__main__":
+    
+if __name__ == "__main__":
     main()
-
-
-
