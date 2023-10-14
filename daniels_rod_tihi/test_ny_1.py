@@ -9,4 +9,5 @@ sorted_database = df.sort_values("total_score", ascending=False)
 
 print(sorted_database)
 
-
+# print film titel på film med højest total_score
+print(sorted_database.iloc[1,0])
