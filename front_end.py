@@ -35,65 +35,69 @@ class App(customtkinter.CTk):
 
 
 
+        sorted_row_rely = 0.5
+        film_1_rely = 0.55
+        film_2_rely = 0.6
+        film_3_rely = 0.65
+        film_4_rely = 0.7
+        film_5_rely = 0.75
 
-        """
-        # Definer text_label
-        text_label = customtkinter.CTkLabel(self, 
-                                                   state="normal", 
-                                                   text="Film_1, 8, 4, 6, 4, 6, 56", 
-                                                   width=900, 
-                                                   height=400,
-                                                   text_color="black", 
-                                                   fg_color="white",
-                                                   font=("Helvetica", 30)
-                                                   )
-                                            
-    
-        # Indsæt text_label i vindue
-        text_label.place(relx=0.5, rely=0.7, anchor=CENTER)
-        """
+
+
+     
+
+        scaling_size = 4
+        current_path = os.path.dirname(os.path.realpath(__file__))
+        self.bg_image = customtkinter.CTkImage(Image.open(current_path + "/media/hk_icon_2.png"),
+                                               size=( 100 * scaling_size, 100 * scaling_size))
+
+        self.bg_image_label = customtkinter.CTkLabel(self, image=self.bg_image, text="")
+      
+        self.bg_image_label.place(relx= 0.5, rely=0.2, anchor=CENTER)
+
+
 
         # --------------------------- film 1 labels ------------------------------------ #
         # Definer film_1_titel
         film_1_titel = customtkinter.CTkLabel(self, state="normal", text="Film_1_titel")
 
         # Indsæt film_1_titel i vindue
-        film_1_titel.place(relx=0.2, rely=0.5, anchor=CENTER)
+        film_1_titel.place(relx=0.2, rely= film_1_rely, anchor=CENTER)
 
 
         # Definer film_1_score_1
         film_1_score_1 = customtkinter.CTkLabel(self, state="normal", text="Film_1_score_1")
 
         # Indsæt film_1_score_1 i vindue
-        film_1_score_1.place(relx=0.3, rely=0.5, anchor=CENTER)
+        film_1_score_1.place(relx=0.3, rely= film_1_rely, anchor=CENTER)
 
 
         # Definer film_1_score_2
         film_1_score_2 = customtkinter.CTkLabel(self, state="normal", text="Film_1_score_2")
 
         # Indsæt film_1_score_2 i vindue
-        film_1_score_2.place(relx=0.4, rely=0.5, anchor=CENTER)
+        film_1_score_2.place(relx=0.4, rely= film_1_rely, anchor=CENTER)
 
 
         # Definer film_1_score_3
         film_1_score_3 = customtkinter.CTkLabel(self, state="normal", text="Film_1_score_3")
 
         # Indsæt film_1_score_3 i vindue
-        film_1_score_3.place(relx=0.5, rely=0.5, anchor=CENTER)
+        film_1_score_3.place(relx=0.5, rely= film_1_rely, anchor=CENTER)
 
 
         # Definer film_1_score_4
         film_1_score_4 = customtkinter.CTkLabel(self, state="normal", text="Film_1_score_4")
 
         # Indsæt film_1_score_4 i vindue
-        film_1_score_4.place(relx=0.6, rely=0.5, anchor=CENTER)
+        film_1_score_4.place(relx=0.6, rely= film_1_rely, anchor=CENTER)
 
 
         # Definer film_1_score_5
         film_1_score_5 = customtkinter.CTkLabel(self, state="normal", text="Film_1_score_5")
 
         # Indsæt film_1_score_5 i vindue
-        film_1_score_5.place(relx=0.7, rely=0.5, anchor=CENTER)
+        film_1_score_5.place(relx=0.7, rely= film_1_rely, anchor=CENTER)
 
 
 
@@ -101,7 +105,7 @@ class App(customtkinter.CTk):
         film_1_total_score = customtkinter.CTkLabel(self, state="normal", text="Film_1_total_score")
 
         # Indsæt film_1_score_5 i vindue
-        film_1_total_score.place(relx=0.8, rely=0.5, anchor=CENTER)
+        film_1_total_score.place(relx=0.8, rely= film_1_rely, anchor=CENTER)
 
         # ------------------------------------------------------------------------- #
 
@@ -112,42 +116,42 @@ class App(customtkinter.CTk):
         film_2_titel = customtkinter.CTkLabel(self, state="normal", text="Film_2_titel")
 
         # Indsæt film_2_titel i vindue
-        film_2_titel.place(relx=0.2, rely=0.55, anchor=CENTER)
+        film_2_titel.place(relx=0.2, rely= film_2_rely, anchor=CENTER)
 
 
         # Definer film_2_score_1
         film_2_score_1 = customtkinter.CTkLabel(self, state="normal", text="Film_2_score_1")
 
         # Indsæt film_2_score_1 i vindue
-        film_2_score_1.place(relx=0.3, rely=0.55, anchor=CENTER)
+        film_2_score_1.place(relx=0.3, rely= film_2_rely, anchor=CENTER)
 
 
         # Definer film_2_score_2
         film_2_score_2 = customtkinter.CTkLabel(self, state="normal", text="Film_2_score_2")
 
         # Indsæt film_2_score_2 i vindue
-        film_2_score_2.place(relx=0.4, rely=0.55, anchor=CENTER)
+        film_2_score_2.place(relx=0.4, rely= film_2_rely, anchor=CENTER)
 
 
         # Definer film_2_score_3
         film_2_score_3 = customtkinter.CTkLabel(self, state="normal", text="Film_2_score_3")
 
         # Indsæt film_2_score_3 i vindue
-        film_2_score_3.place(relx=0.5, rely=0.55, anchor=CENTER)
+        film_2_score_3.place(relx=0.5, rely= film_2_rely, anchor=CENTER)
 
 
         # Definer film_2_score_4
         film_2_score_4 = customtkinter.CTkLabel(self, state="normal", text="Film_2_score_4")
 
         # Indsæt film_2_score_4 i vindue
-        film_2_score_4.place(relx=0.6, rely=0.55, anchor=CENTER)
+        film_2_score_4.place(relx=0.6, rely= film_2_rely, anchor=CENTER)
 
 
         # Definer film_2_score_5
         film_2_score_5 = customtkinter.CTkLabel(self, state="normal", text="Film_2_score_5")
 
         # Indsæt film_2_score_5 i vindue
-        film_2_score_5.place(relx=0.7, rely=0.55, anchor=CENTER)
+        film_2_score_5.place(relx=0.7, rely= film_2_rely, anchor=CENTER)
 
 
 
@@ -155,7 +159,7 @@ class App(customtkinter.CTk):
         film_2_total_score = customtkinter.CTkLabel(self, state="normal", text="Film_2_total_score")
 
         # Indsæt film_2_score_5 i vindue
-        film_2_total_score.place(relx=0.8, rely=0.55, anchor=CENTER)
+        film_2_total_score.place(relx=0.8, rely= film_2_rely, anchor=CENTER)
 
         # ------------------------------------------------------------------------- #
 
@@ -166,42 +170,42 @@ class App(customtkinter.CTk):
         film_3_titel = customtkinter.CTkLabel(self, state="normal", text="Film_3_titel")
 
         # Indsæt film_3_titel i vindue
-        film_3_titel.place(relx=0.2, rely=0.6, anchor=CENTER)
+        film_3_titel.place(relx=0.2, rely= film_3_rely, anchor=CENTER)
 
 
         # Definer film_3_score_1
         film_3_score_1 = customtkinter.CTkLabel(self, state="normal", text="Film_3_score_1")
 
         # Indsæt film_3_score_1 i vindue
-        film_3_score_1.place(relx=0.3, rely=0.6, anchor=CENTER)
+        film_3_score_1.place(relx=0.3, rely= film_3_rely, anchor=CENTER)
 
 
         # Definer film_3_score_2
         film_3_score_2 = customtkinter.CTkLabel(self, state="normal", text="Film_3_score_2")
 
         # Indsæt film_3_score_2 i vindue
-        film_3_score_2.place(relx=0.4, rely=0.6, anchor=CENTER)
+        film_3_score_2.place(relx=0.4, rely= film_3_rely, anchor=CENTER)
 
 
         # Definer film_3_score_3
         film_3_score_3 = customtkinter.CTkLabel(self, state="normal", text="Film_3_score_3")
 
         # Indsæt film_3_score_3 i vindue
-        film_3_score_3.place(relx=0.5, rely=0.6, anchor=CENTER)
+        film_3_score_3.place(relx=0.5, rely= film_3_rely, anchor=CENTER)
 
 
         # Definer film_3_score_4
         film_3_score_4 = customtkinter.CTkLabel(self, state="normal", text="Film_3_score_4")
 
         # Indsæt film_3_score_4 i vindue
-        film_3_score_4.place(relx=0.6, rely=0.6, anchor=CENTER)
+        film_3_score_4.place(relx=0.6, rely= film_3_rely, anchor=CENTER)
 
 
         # Definer film_3_score_5
         film_3_score_5 = customtkinter.CTkLabel(self, state="normal", text="Film_3_score_5")
 
         # Indsæt film_3_score_5 i vindue
-        film_3_score_5.place(relx=0.7, rely=0.6, anchor=CENTER)
+        film_3_score_5.place(relx=0.7, rely= film_3_rely, anchor=CENTER)
 
 
 
@@ -209,7 +213,7 @@ class App(customtkinter.CTk):
         film_3_total_score = customtkinter.CTkLabel(self, state="normal", text="Film_3_total_score")
 
         # Indsæt film_3_score_5 i vindue
-        film_3_total_score.place(relx=0.8, rely=0.6, anchor=CENTER)
+        film_3_total_score.place(relx=0.8, rely= film_3_rely, anchor=CENTER)
 
         # ------------------------------------------------------------------------- #
 
@@ -219,42 +223,42 @@ class App(customtkinter.CTk):
         film_4_titel = customtkinter.CTkLabel(self, state="normal", text="Film_4_titel")
 
         # Indsæt film_4_titel i vindue
-        film_4_titel.place(relx=0.2, rely=0.65, anchor=CENTER)
+        film_4_titel.place(relx=0.2, rely= film_4_rely, anchor=CENTER)
 
 
         # Definer film_4_score_1
         film_4_score_1 = customtkinter.CTkLabel(self, state="normal", text="Film_4_score_1")
 
         # Indsæt film_4_score_1 i vindue
-        film_4_score_1.place(relx=0.3, rely=0.65, anchor=CENTER)
+        film_4_score_1.place(relx=0.3, rely= film_4_rely, anchor=CENTER)
 
 
         # Definer film_4_score_2
         film_4_score_2 = customtkinter.CTkLabel(self, state="normal", text="Film_4_score_2")
 
         # Indsæt film_4_score_2 i vindue
-        film_4_score_2.place(relx=0.4, rely=0.65, anchor=CENTER)
+        film_4_score_2.place(relx=0.4, rely= film_4_rely, anchor=CENTER)
 
 
         # Definer film_4_score_3
         film_4_score_3 = customtkinter.CTkLabel(self, state="normal", text="Film_4_score_3")
 
         # Indsæt film_4_score_3 i vindue
-        film_4_score_3.place(relx=0.5, rely=0.65, anchor=CENTER)
+        film_4_score_3.place(relx=0.5, rely= film_4_rely, anchor=CENTER)
 
 
         # Definer film_4_score_4
         film_4_score_4 = customtkinter.CTkLabel(self, state="normal", text="Film_4_score_4")
 
         # Indsæt film_4_score_4 i vindue
-        film_4_score_4.place(relx=0.6, rely=0.65, anchor=CENTER)
+        film_4_score_4.place(relx=0.6, rely= film_4_rely, anchor=CENTER)
 
 
         # Definer film_4_score_5
         film_4_score_5 = customtkinter.CTkLabel(self, state="normal", text="Film_4_score_5")
 
         # Indsæt film_4_score_5 i vindue
-        film_4_score_5.place(relx=0.7, rely=0.65, anchor=CENTER)
+        film_4_score_5.place(relx=0.7, rely= film_4_rely, anchor=CENTER)
 
 
 
@@ -262,7 +266,7 @@ class App(customtkinter.CTk):
         film_4_total_score = customtkinter.CTkLabel(self, state="normal", text="Film_4_total_score")
 
         # Indsæt film_4_score_5 i vindue
-        film_4_total_score.place(relx=0.8, rely=0.65, anchor=CENTER)
+        film_4_total_score.place(relx=0.8, rely= film_4_rely, anchor=CENTER)
 
         # ------------------------------------------------------------------------- #
 
@@ -272,42 +276,42 @@ class App(customtkinter.CTk):
         film_5_titel = customtkinter.CTkLabel(self, state="normal", text="Film_5_titel")
 
         # Indsæt film_5_titel i vindue
-        film_5_titel.place(relx=0.2, rely=0.7, anchor=CENTER)
+        film_5_titel.place(relx=0.2, rely= film_5_rely, anchor=CENTER)
 
 
         # Definer film_5_score_1
         film_5_score_1 = customtkinter.CTkLabel(self, state="normal", text="Film_5_score_1")
 
         # Indsæt film_5_score_1 i vindue
-        film_5_score_1.place(relx=0.3, rely=0.7, anchor=CENTER)
+        film_5_score_1.place(relx=0.3, rely= film_5_rely, anchor=CENTER)
 
 
         # Definer film_5_score_2
         film_5_score_2 = customtkinter.CTkLabel(self, state="normal", text="Film_5_score_2")
 
         # Indsæt film_5_score_2 i vindue
-        film_5_score_2.place(relx=0.4, rely=0.7, anchor=CENTER)
+        film_5_score_2.place(relx=0.4, rely= film_5_rely, anchor=CENTER)
 
 
         # Definer film_5_score_3
         film_5_score_3 = customtkinter.CTkLabel(self, state="normal", text="Film_5_score_3")
 
         # Indsæt film_5_score_3 i vindue
-        film_5_score_3.place(relx=0.5, rely=0.7, anchor=CENTER)
+        film_5_score_3.place(relx=0.5, rely= film_5_rely, anchor=CENTER)
 
 
         # Definer film_5_score_4
         film_5_score_4 = customtkinter.CTkLabel(self, state="normal", text="Film_5_score_4")
 
         # Indsæt film_5_score_4 i vindue
-        film_5_score_4.place(relx=0.6, rely=0.7, anchor=CENTER)
+        film_5_score_4.place(relx=0.6, rely= film_5_rely, anchor=CENTER)
 
 
         # Definer film_5_score_5
         film_5_score_5 = customtkinter.CTkLabel(self, state="normal", text="Film_5_score_5")
 
         # Indsæt film_5_score_5 i vindue
-        film_5_score_5.place(relx=0.7, rely=0.7, anchor=CENTER)
+        film_5_score_5.place(relx=0.7, rely= film_5_rely, anchor=CENTER)
 
 
 
@@ -315,7 +319,7 @@ class App(customtkinter.CTk):
         film_5_total_score = customtkinter.CTkLabel(self, state="normal", text="Film_5_total_score")
 
         # Indsæt film_5_score_5 i vindue
-        film_5_total_score.place(relx=0.8, rely=0.7, anchor=CENTER)
+        film_5_total_score.place(relx=0.8, rely= film_5_rely, anchor=CENTER)
 
         # ------------------------------------------------------------------------- #
 
@@ -1151,7 +1155,7 @@ class App(customtkinter.CTk):
         sort_by_total_score = customtkinter.CTkButton(self, text="TOTAL SCORE", width=120, command=sort_by_total_score_function)
 
         # Indsæt sort_by_total_score i vindue
-        sort_by_total_score.place(relx=0.8, rely=0.4, anchor=CENTER)
+        sort_by_total_score.place(relx=0.8, rely= sorted_row_rely, anchor=CENTER)
 
         # ------------------------------------------------------------------------------------- #
 
@@ -1166,7 +1170,7 @@ class App(customtkinter.CTk):
         sort_by_fede_skurke = customtkinter.CTkButton(self, text="FEDE SKURKE", width=120, command=sort_by_fede_skurke_function)
 
         # Indsæt sort_by_total_score i vindue
-        sort_by_fede_skurke.place(relx=0.3, rely=0.4, anchor=CENTER)
+        sort_by_fede_skurke.place(relx=0.3, rely= sorted_row_rely, anchor=CENTER)
 
         # ------------------------------------------------------------------------------------- #      
         
@@ -1178,10 +1182,11 @@ class App(customtkinter.CTk):
         sort_by_bar_hud = customtkinter.CTkButton(self, text="BAR HUD", width=120, command=sort_by_bar_hud_function)
 
         # Indsæt sort_by_total_score i vindue
-        sort_by_bar_hud.place(relx=0.4, rely=0.4, anchor=CENTER)
+        sort_by_bar_hud.place(relx=0.4, rely= sorted_row_rely, anchor=CENTER)
 
         # --------------------------------------------------------------------------------- #          
     
+
 
 
 
@@ -1193,7 +1198,7 @@ class App(customtkinter.CTk):
         sort_by_vilde_våben = customtkinter.CTkButton(self, text="VILDE VÅBEN", width=120, command=sort_by_vilde_våben_function)
 
         # Indsæt sort_by_total_score i vindue
-        sort_by_vilde_våben.place(relx=0.5, rely=0.4, anchor=CENTER)
+        sort_by_vilde_våben.place(relx=0.5, rely= sorted_row_rely, anchor=CENTER)
 
         # ------------------------------------------------------------------------------------- #     
 
@@ -1205,7 +1210,7 @@ class App(customtkinter.CTk):
         sort_by_oneliners = customtkinter.CTkButton(self, text="ONELINERS", width=120, command=sort_by_oneliners_function)
 
         # Indsæt sort_by_total_score i vindue
-        sort_by_oneliners.place(relx=0.6, rely=0.4, anchor=CENTER)
+        sort_by_oneliners.place(relx=0.6, rely= sorted_row_rely, anchor=CENTER)
 
         # ----------------------------------------------------------------------------------- #     
 
@@ -1217,7 +1222,7 @@ class App(customtkinter.CTk):
         sort_by_episk_action = customtkinter.CTkButton(self, text="ONELINERS", width=120, command=sort_by_episk_action_function)
 
         # Indsæt sort_by_total_score i vindue
-        sort_by_episk_action.place(relx=0.7, rely=0.4, anchor=CENTER)
+        sort_by_episk_action.place(relx=0.7, rely= sorted_row_rely, anchor=CENTER)
 
         # ----------------------------------------------------------------------------------- #   
 
